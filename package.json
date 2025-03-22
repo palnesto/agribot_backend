@@ -30,6 +30,7 @@
     "@types/react-dom": "^19.0.2",
     "@types/ua-parser-js": "^0.7.39",
     "axios": "^1.7.9",
+    "bcryptjs": "^3.0.2",
     "cookie-session": "^2.1.0",
     "dayjs": "^1.11.13",
     "hono": "^4.6.5",

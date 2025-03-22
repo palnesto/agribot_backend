@@ -16,7 +16,7 @@ export const productZodSchema = z.object({
       })
     )
     .default([]),
-  assets: z.array(z.string().url({ message: 'Each asset must be a valid URL.' })).default([]),
+  assets: z.array(z.string().url({ message: 'Each asset must be a valid URL.' })).default([]), // (image | video)[]
   archivedAt: z.date().nullable().default(null),
 });
 
