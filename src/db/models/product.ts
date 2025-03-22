@@ -1,4 +1,3 @@
-import { Schema } from 'mongoose';
 import { createSchema, createModel, type IBaseDocument } from '../base';
 import { z } from 'zod';
 

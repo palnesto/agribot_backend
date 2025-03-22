@@ -21,6 +21,7 @@ export const createAdminService = async (data: { name: string; email: string; pa
     ],
     { session }
   );
+  console.log('admin created successfully', admin);
 
   return admin;
 };

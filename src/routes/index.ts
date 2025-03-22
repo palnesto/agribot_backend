@@ -3,6 +3,7 @@ import { Hono } from 'hono';
 import { ApiResponse } from '@/utils/ApiResponse';
 import { utilsRouter } from './utils/urls';
 import { productRouter } from './product';
+import { adminRouter } from './admin';
 
 const app = new Hono();
 
@@ -15,6 +16,7 @@ export const routes = app
       })
     );
   })
+  .route('/admin', adminRouter)
   .route('/utils', utilsRouter)
   .route('/product', productRouter);
 

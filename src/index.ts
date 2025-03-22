@@ -7,11 +7,11 @@ import { logger } from 'hono/logger';
 import { poweredBy } from 'hono/powered-by';
 import { prettyJSON } from 'hono/pretty-json';
 import { secureHeaders } from 'hono/secure-headers';
-import { initializeCronJobs } from './cron-jobs';
 import connectDB from './db/connect';
 import { errorHandler, notFound } from './middlewares';
 import { routes } from './routes';
 import { parsedEnv } from '../env';
+import { createAdminService } from './services/admin';
 
 export const cookieOptions = {
   httpOnly: true,
