@@ -3,6 +3,7 @@ import { z } from 'zod';
 
 // ---------------- Zod Schemas ---------------- //
 export const productZodSchema = z.object({
+  heroImage: z.string().url({ message: 'Each asset must be a valid URL.' }),
   name: z.string().min(1, { message: 'Name is required.' }),
   price: z.number().min(0, { message: 'Price must be a positive number.' }),
   short_description: z.string().min(1, { message: 'Short description is required.' }),
@@ -22,6 +23,7 @@ export const productZodSchema = z.object({
 // For partial updates
 export const productUpdateSchema = productZodSchema
   .pick({
+    heroImage: true,
     name: true,
     price: true,
     short_description: true,
@@ -42,6 +44,7 @@ export type IProduct = z.infer<typeof productZodSchema> & IBaseDocument;
 
 // ---------------- Mongoose Schema ---------------- //
 const ProductSchema = createSchema<IProduct>({
+  heroImage: { type: String, required: true },
   name: { type: String, required: true },
   price: { type: Number, required: true },
   short_description: { type: String, required: true },
