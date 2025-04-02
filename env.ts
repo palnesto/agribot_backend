@@ -5,17 +5,18 @@ const envVariables = z.object({
   NODE_ENV: z.enum(['development', 'production', 'test']),
   PORT: z.string(),
 
-  // BASE_URL
-  BASE_URL: z.string().url(), // Validate it's a valid URL
-
-  // APP
-  APP_VERSION: z.string(), // Ensure it's a string (could add version format if needed)
-  APP_NAME: z.string(), // Ensure it's a string
-
   // DB
   MONGO_URI: z.string().url(), // Validate it's a valid Mongo URI
 
   ORIGINS: z.string(),
+
+  DO_SPACES_ENDPOINT: z.string(),
+  DO_SPACES_BUCKET: z.string(),
+  DO_SPACES_KEY: z.string(),
+  DO_SPACES_SECRET: z.string(),
+  DO_SPACES_REGION: z.string(),
+
+  ADMIN_JWT_SECRET: z.string(),
 });
 
 declare global {
