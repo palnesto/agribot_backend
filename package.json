@@ -1,5 +1,5 @@
 {
-  "name": "grwb_server",
+  "name": "agribot_backend",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
